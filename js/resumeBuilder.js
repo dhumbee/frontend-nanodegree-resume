@@ -7,8 +7,8 @@ var bio = {
 		"github": "https://github.com/dhumbee",
 		"location": "Hanover, Pennsylvania"
 	},
-	"picture URL": "images/crop.jpg",
-	"welcome message": "Thanks for viewing my resume!",
+	"picture": "images/crop.jpg",
+	"welcomeMessage": "Thanks for viewing my resume!  Please see below for ways to reach out to me.",
 	"skills": [
 		"Microsoft Office", "HTML5", "CSS", "JavaScript"
 	]
@@ -105,6 +105,27 @@ var projects = {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
 
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").append(formattedRole);
+
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
+$("#header").append(formattedBioPic);
+
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedWelcomeMsg);
+
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#header").append(formattedMobile);
+
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#header").append(formattedEmail);
+
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#header").append(formattedGithub);
+
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#header").append(formattedLocation);
+
 if(bio.skills.length > 0) {
 
 	$("#header").append(HTMLskillsStart);
@@ -123,9 +144,16 @@ if(bio.skills.length > 0) {
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 
-	var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer );
-	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title );
+	var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 	var formattedEmployerTitle =  formattedEmployer + formattedTitle;
+	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+	var formattedDatesLocation = formattedDates + formattedLocation;
+	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
 
 	$(".work-entry:last").append(formattedEmployerTitle);
+	$(".work-entry:last").append(formattedDatesLocation);
+	$(".work-entry:last").append(formattedDescription);
 }
