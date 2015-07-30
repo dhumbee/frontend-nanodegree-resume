@@ -103,23 +103,22 @@ var projects = {
 };
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").append(formattedName);
-
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").append(formattedRole);
+var formattedNameRole = formattedName + formattedRole;
+$("#header").prepend(formattedNameRole);
 
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
 $("#header").append(formattedBioPic);
 
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedWelcomeMsg);
+$("#msg").append(formattedWelcomeMsg);
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
-$("#header").append(formattedContactInfo);
+$("#topContacts").prepend(formattedContactInfo);
 
 if(bio.skills.length > 0) {
 
