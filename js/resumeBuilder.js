@@ -157,9 +157,35 @@ function displayWork() {
 
 displayWork();
 
+projects.display = function() {
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedProjectTitle);
+
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedProjectDates);
+
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedProjectDescription);
+
+		if(projects.projects[project].images.length > 0) {
+			for(image in projects.projects[project].images) {
+				var formattedProjectImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedProjectImages);
+			}
+		}
+
+	}
+}
+
+projects.display();
 
 
-function inName(name) {
+var name=formattedName;
+
+function inName() {
 	name = name.trim().split(" ");
 	console.log(name);
 	name[1]=name[1].toUpperCase();
@@ -168,4 +194,6 @@ function inName(name) {
 	return name[0] +" "+name[1];	
 }
 
-$("#main").append(internationalizeButton);
+$("#main").prepend(internationalizeButton);
+
+$("#map-div").append(googleMap);
