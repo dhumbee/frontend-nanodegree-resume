@@ -1,6 +1,6 @@
 var bio = {
 	"name": "Dianna Hummel",
-	"role": "Web Developer",
+	"role": "| Web Developer",
 	"contacts": {
 		"mobile": "717-688-1492",
 		"email": "dhummel.1210@gmail.com",
@@ -87,8 +87,8 @@ var projects = {
 		"description": "This was my final project in my Intro to Programming course.  It's an culmination of notes from stage 4, which touched on the full " +
 		"stack web developer, and stage 5 which was an all around course on	new ideas.",
 		"images": [
-			"images/inpd-stage5-home.png", "images/inpd-stage5-toggle-descriptions.png", "images/inpd-stage5-codepen.png", "images/inpd-stage5-guestbook.png",
-			"images/inpd-stage5-notes.png", "images/inpd-stage5-notes2.png"
+			"src-images/inpd-stage5-home-400small.png", "src-images/inpd-stage5-toggle-descriptions-400small.png", "src-images/inpd-stage5-codepen-400small.png", "src-images/inpd-stage5-guestbook-400small.png",
+			"src-images/inpd-stage5-notes-400small.png", "src-images/inpd-stage5-notes2-400small.png"
 		]
 	},
 	{
@@ -96,7 +96,7 @@ var projects = {
 		"dates": "July 2015",
 		"description": "My first project in the Front End Web Developer Nano-Degree was to create a basic portfolio page that could show off my projects and the that I wrote.",
 		"images": [
-			"images/portfolio-1.png", "images/portfolio-2.png", "images/portfolio-3.png"
+			"src-images/portfolio-1-400small.png", "src-images/portfolio-2-400small.png", "src-images/portfolio-3-400small.png"
 		]
 	}
 	]
@@ -107,8 +107,8 @@ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedNameRole = formattedName + formattedRole;
 $("#header").prepend(formattedNameRole);
 
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
-$("#header").append(formattedBioPic);
+//var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
+//$("#header").append(formattedBioPic);
 
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#msg").append(formattedWelcomeMsg);
@@ -120,7 +120,7 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
 $("#topContacts").prepend(formattedContactInfo);
 
-if(bio.skills.length > 0) {
+/*if(bio.skills.length > 0) {
 
 	$("#header").append(HTMLskillsStart);
 
@@ -133,30 +133,31 @@ if(bio.skills.length > 0) {
 	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 	$("#skills").append(formattedSkill);
 
-}
+}*/
 
-
-function displayWork() {
+//below is the code that will add my work information to the resume
+work.display = function() {
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle =  formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+
 		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		var formattedDatesLocation = formattedDates + formattedLocation;
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-
-
-		$(".work-entry:last").append(formattedEmployerTitle);
 		$(".work-entry:last").append(formattedDatesLocation);
+
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
 }
 
-displayWork();
+work.display();
 
+//this projects display function assigns my project object to the resume
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
@@ -179,21 +180,45 @@ projects.display = function() {
 
 	}
 }
-
 projects.display();
 
+//below is my code for displaying my education
+education.display = function () {
+	for (edu in education.onlineCourses) {
+		$("#education").append(HTMLschoolStart);
 
-var name=formattedName;
 
-function inName() {
-	name = name.trim().split(" ");
-	console.log(name);
-	name[1]=name[1].toUpperCase();
-	name[0]=name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[edu].title);
+		$(".education-entry:last").append(formattedOnlineTitle);
 
-	return name[0] +" "+name[1];	
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[edu].school);
+		$(".education-entry:last").append(formattedOnlineSchool);
+
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[edu].dates);
+		$(".education-entry:last").append(formattedOnlineDates);
+
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[edu].url);
+		$(".education-entry:last").append(formattedOnlineURL);
+	}
 }
+$("#education").append(HTMLonlineClasses);
+education.display();
 
-$("#main").prepend(internationalizeButton);
-
+//here is the selector that puts the google map on the page
 $("#map-div").append(googleMap);
+
+//below is the code for the internalize button, it's not running correctly yet
+//var name=formattedName;
+
+//function inName() {
+	//name = name.trim().split(" ");
+	//console.log(name);
+	//name[1]=name[1].toUpperCase();
+	//name[0]=name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+
+	//return name[0] +" "+name[1];	
+//}
+
+//$("#main").prepend(internationalizeButton);
+
+
