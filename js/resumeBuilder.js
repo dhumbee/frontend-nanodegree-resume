@@ -1,6 +1,6 @@
 var bio = {
 	"name": "Dianna Hummel",
-	"role": "| Web Developer",
+	"role": "&lt;/Web Developer&gt;",
 	"contacts": {
 		"mobile": "717-688-1492",
 		"email": "dhummel.1210@gmail.com",
