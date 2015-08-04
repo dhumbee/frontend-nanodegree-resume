@@ -6,56 +6,87 @@ body {
   background-repeat: no-repeat;
 }
 
+img {
+  width: 100%;
+}
+
+.primary-column {
+  width: 35%;
+}
+
+.secondary-column {
+  width: 65%;
+}
+
 #header {
   background-color: #484848;
   padding: 5px;
+  width: 100%;
+  border-bottom-style: groove;
   
 }
 
-.clear-fix {
-  overflow: auto;
-}
+nav {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  background-color: #484848;
+  font-size: 20px;
 
-#navbar {
-display:inline-block;
-width:100%;
-float: right;
-white-space: nowrap;
-border-top-style: groove;
-border-top-width: 5px;
-}
-
-.navbar-li {
-display:inline-block;
-white-space:nowrap;
-background-color:#484848;
-margin-bottom: 25px;
-}
-
-.left-align-li {
-  float:left;
-  margin: 0px 0px 0px 175px;
-  font-size: 30px;
-  color: #fffacd;
-}
-
-.right-align {
-  float: right;
-  font-size: 30px;
-  margin: 0px 30px 0px 30px;
-
-}
-
-.end-navbar{
-  margin: 0px 175px 0px 30px;
 }
  
-a {
+ nav ul {
+  margin: 0 auto;
+  width: 1000px;
+ }
+
+ nav li {
+  display: inline;
+  float: left;
+ }
+
+nav a {
   text-decoration: none;
   color: #fffacd;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
 }
+
+nav li a {
+    border-right: 1px solid #fffacd;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+nav li:last-child a {
+    border-right: 0;
+}
+
+nav a:hover, nav a:active {
+    background-color: #8c99a4;
+}
+
+#pull {
+  display: none;
+}       
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
  #name {
-  margin: 35px 0px 0px 50px;
+  margin: 20px 0px 0px 100px;
   font-family: 'Sigmar One', cursive;
   font-size: 50px;
   float: left;
@@ -65,22 +96,33 @@ a {
 .role {
   font-weight: 300;
   font-size: 20px;
-  margin: 70px 0px 0px 10px;
+  margin: 57px 0px 0px 10px;
   float: left;
   color: #fffacd;
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
+#bio-skills-box {
+  background-color: rgba(255, 250, 205, 0.6); 
+  margin: 5%;
 }
+
+#pic {
+  
+}
+
+
+.biopic {
+  border-radius: 50%;
+  width: 50%;
+}
+
+
 
 
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
+/*@media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
   }
@@ -121,4 +163,4 @@ a {
   .biopic {
     display: block;
   }
-}
+}*/
