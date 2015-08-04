@@ -17,6 +17,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width+device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
@@ -49,7 +50,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
 
-  <meta name="viewport" content="width=device-width">
 </head>
 <body>
   <div id="main">
@@ -59,24 +59,25 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
-      <div id="navbar">
-        <nav>
-          <ul>
-            <li class="navbar-li left-align-li"><strong>Home</strong></li>
-            <li class="navbar-li right-align end-navbar"><a href="work-experience.html">Where I've Been</a></li>
-            <li class="navbar-li right-align"><a href="projects.html">What I've Done</a></li>
-            <li class="navbar-li right-align"><a href="education.html">How I Grow</a></li>
-            <li class="navbar-li right-align"><a href="contact.html">Contact Me</a></li>
-
-          </ul>
-        </nav>
-      </div>
+    <div id="header" class="clearfix">
     </div>
+    <nav class="clearfix">
+      <ul class="clearfix">
+        <li><a href="#"><strong>Home</strong></a></li>
+        <li><a href="work-experience.html">Where I've Been</a></li>
+        <li><a href="projects.html">What I've Done</a></li>
+        <li><a href="education.html">How I Grow</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+      <a href="#" id="pull">Menu</a>
+    </nav>
 
     <section>
       <div id="main-body">
-        
+        <div id="bio-skills-box" class="primary-column">
+          <div id="pic">
+          </div>
+        </div>
       </div>
     </section>
       <!--<div id="msg" class="center-content clear-fix">
