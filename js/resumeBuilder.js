@@ -122,19 +122,6 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
 $("#topContacts").prepend(formattedContactInfo);
 
-/*if(bio.skills.length > 0) {	
-
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-	$("#skills").append(formattedSkill);
-
-}*/
-
 //below is the code that will add my work information to the resume
 work.display = function() {
 	for (job in work.jobs) {
