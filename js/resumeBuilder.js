@@ -110,6 +110,8 @@ $("#header").prepend(formattedNameRole);
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
 $("#pic").append(formattedBioPic);
 
+$("#skills-section").append(HTMLskillsStart);
+
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#msg").append(formattedWelcomeMsg);
 
@@ -120,9 +122,7 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
 $("#topContacts").prepend(formattedContactInfo);
 
-/*if(bio.skills.length > 0) {
-
-	$("#header").append(HTMLskillsStart);
+/*if(bio.skills.length > 0) {	
 
 	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
 	$("#skills").append(formattedSkill);
