@@ -35,11 +35,13 @@ nav {
  nav ul {
   margin: 0 auto;
   width: 1000px;
+  height: 40px;
  }
 
  nav li {
   display: inline;
   float: left;
+  height: 40px;
  }
 
 nav a {
@@ -48,6 +50,8 @@ nav a {
   display: inline-block;
   width: 200px;
   text-align: center;
+  height: 40px;
+  padding-top: 8px;
 }
 
 nav li a {
@@ -145,7 +149,7 @@ nav a:hover, nav a:active {
     width: 100%;
   }
   #bio-skills-box {
-    min-width: 350px;
+    min-width: 320px;
   }
 }
 
@@ -162,3 +166,36 @@ nav a:hover, nav a:active {
     text-align: center;
   }
 }
+
+
+@media only screen and (max-width : 500px) {
+  nav {
+    border-bottom: 0;
+    
+  }
+  nav ul {
+    display: none;
+    height: auto;
+    
+  }
+  #pull {
+    display: block;
+    background-color: #484848;
+    width: 100%;
+    position: relative;
+    height: 60px;
+    font-size: 35px;
+  }
+  #pull:after {
+    content:"";
+    background: url(../images/nav_icon.png) no-repeat;
+    width: 63px;
+    height: 63px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    bottom: 5px;
+  }
+}
+
