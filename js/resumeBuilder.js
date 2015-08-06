@@ -8,7 +8,6 @@ var bio = {
 		"location": "Hanover, Pennsylvania"
 	},
 	"picture": "images/crop.jpg",
-	"welcomeMessage": "Thanks for viewing my resume!  Please see below for ways to reach out to me.",
 	"skills": [
 		"Microsoft Office", "HTML5", "CSS", "JavaScript"
 	]
@@ -112,15 +111,12 @@ $("#pic").append(formattedBioPic);
 
 $("#skills-section").append(HTMLskillsStart);
 
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#msg").append(formattedWelcomeMsg);
-
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
-$("#topContacts").prepend(formattedContactInfo);
+$("#contact-me").append(formattedContactInfo);
 
 //below is the code that will add my work information to the resume
 work.display = function() {
