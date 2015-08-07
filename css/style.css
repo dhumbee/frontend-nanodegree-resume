@@ -356,3 +356,53 @@ blockquote {
     margin: 5%;
   }
 }
+
+/*Work Experience.html styling*/
+
+#workExperience {
+  margin: 5%;
+}
+
+.work-heading {
+  color: #484848;
+  font-size: 40px;
+}
+
+.work-entry {
+  font-size: 25px;
+  border-bottom: #fff5f5 solid 3px;
+  color: #484848;
+  background-color: rgba(255, 189, 220, 0.4);
+  margin: 50px;
+  padding: 50px;
+}
+
+.first-line-experience {
+  font-size: 30px;
+  color:rgba(78, 69, 76, 1);
+}
+
+.date-text {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .work-entry {
+    font-size: 20px;
+    margin: 30px;
+  }
+  .first-line-experience {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .work-entry {
+    font-size: 15px;
+    margin: 25px;
+    padding: 25px;
+  }
+  .first-line-experience {
+    font-size: 20px;
+  }
+}
