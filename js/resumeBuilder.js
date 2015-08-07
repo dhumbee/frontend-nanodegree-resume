@@ -7,7 +7,7 @@ var bio = {
 		"github": "https://github.com/dhumbee",
 		"location": "Hanover, Pennsylvania"
 	},
-	"picture": "images/crop.jpg",
+	"picture": "../images/crop.jpg",
 	"skills": [
 		"Microsoft Office", "HTML5", "CSS", "JavaScript"
 	]
@@ -86,8 +86,8 @@ var projects = {
 		"description": "This was my final project in my Intro to Programming course.  It's an culmination of notes from stage 4, which touched on the full " +
 		"stack web developer, and stage 5 which was an all around course on	new ideas.",
 		"images": [
-			"src-images/inpd-stage5-home-400small.png", "src-images/inpd-stage5-toggle-descriptions-400small.png", "src-images/inpd-stage5-codepen-400small.png", "src-images/inpd-stage5-guestbook-400small.png",
-			"src-images/inpd-stage5-notes-400small.png", "src-images/inpd-stage5-notes2-400small.png"
+			"../src-images/inpd-stage5-home-400small.png", "../src-images/inpd-stage5-toggle-descriptions-400small.png", "../src-images/inpd-stage5-codepen-400small.png", "../src-images/inpd-stage5-guestbook-400small.png",
+			"../src-images/inpd-stage5-notes-400small.png", "../src-images/inpd-stage5-notes2-400small.png"
 		]
 	},
 	{
@@ -95,7 +95,7 @@ var projects = {
 		"dates": "July 2015",
 		"description": "My first project in the Front End Web Developer Nano-Degree was to create a basic portfolio page that could show off my projects and the that I wrote.",
 		"images": [
-			"src-images/portfolio-1-400small.png", "src-images/portfolio-2-400small.png", "src-images/portfolio-3-400small.png"
+			"../src-images/portfolio-1-400small.png", "../src-images/portfolio-2-400small.png", "../src-images/portfolio-3-400small.png"
 		]
 	}
 	]
