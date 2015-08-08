@@ -81,7 +81,7 @@ var education = {
 var projects = {
 	"projects": [
 	{
-		"title": "Intro To Programming Stage 5",
+		"title": "Intro To Programming Final Project",
 		"dates": "June 2015",
 		"description": "This was my final project in my Intro to Programming course.  It's an culmination of notes from stage 4, which touched on the full " +
 		"stack web developer, and stage 5 which was an all around course on	new ideas.",
