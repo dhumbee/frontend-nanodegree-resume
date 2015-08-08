@@ -19,7 +19,7 @@ var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%conta
 var HTMLmobile = '<li class="list-items"><span>Mobile: </span><span>%data%</span></li>';
 var HTMLemail = '<li class="list-items"><span>Email: </span><span>%data%</span></li>';
 var HTMLtwitter = '<li><span>Twitter: </span><span>%data%</span></li>';
-var HTMLgithub = '<li class="list-items"><span>Github: </span><span>%data%</span></li>';
+var HTMLgithub = '<li class="list-items"><span>Github: </span><a href="%data%">My Github Profile</a></li>';
 var HTMLblog = '<li><span>Blog: </span><span>%data%</span></li>';
 var HTMLlocation = '<li class="list-items"><span>Location: </span><span>%data%</span></li>';
 
