@@ -8,9 +8,10 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
+/*The primary-column and secondary column class makes the home page into two columns*/
 .primary-column {
   width: 30%;
 }
@@ -406,3 +407,54 @@ blockquote {
     font-size: 20px;
   }
 }
+
+/*Project page styling*/
+
+.picture-grid {
+  
+}
+
+.pixel-size {
+  margin-top: 40px;
+  display: block;
+  position: relative;
+}
+
+.pixel-size img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  border: solid 3px #837683;
+}
+
+
+
+@media screen and (min-width: 1300px) {
+  .column50 {
+    width: 50%;
+    float: left;
+  }
+  .column50-2 {
+    width: 50%;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .column1 {
+    width: 33.333%;
+    float: left;
+  }
+
+  .column2 {
+    width: 33.333%;
+    float: left;
+  }
+
+  .column3 {
+    width: 33.333%;
+    float: right;
+
+  }
+}
+
