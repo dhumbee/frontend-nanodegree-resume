@@ -29,8 +29,8 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" class="first-line-experience">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<span class="first-line-experience">%data%';
+var HTMLworkTitle = ' - %data%</span>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p>%data%</p>';
@@ -51,9 +51,9 @@ var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3 class="online-classes">Online Classes</h3>';
 var HTMLonlineTitle = '<h3>%data%';
-var HTMLonlineSchool = ' - %data%</h3>';
+var HTMLonlineSchool = '%data%</h3>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<br><a href="%data%">Click on this link to see course information.</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

@@ -62,13 +62,13 @@ var education = {
 	"onlineCourses": [
 	{
 		"school": "Udacity",
-		"title": "Front-End Web Developer Nano-Degree",
+		"title": "Front-End Web Developer",
 		"dates": "June 2015-present",
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	},
 	{
 		"school": "Udacity",
-		"title": "Intro to Programming Nano-Degree",
+		"title": "Intro to Programming",
 		"dates": "Feb 2015-June 2015",
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	}
