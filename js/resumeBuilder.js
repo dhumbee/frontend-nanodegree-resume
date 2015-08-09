@@ -7,10 +7,7 @@ var bio = {
 		"github": "https://github.com/dhumbee",
 		"location": "Hanover, Pennsylvania"
 	},
-	"picture": "../images/crop.jpg",
-	"skills": [
-		"Microsoft Office", "HTML5", "CSS", "JavaScript"
-	]
+	"picture": "../images/crop.jpg"
 }
 
 var work = {
@@ -83,19 +80,18 @@ var projects = {
 	{
 		"title": "Intro To Programming Final Project",
 		"dates": "June 2015",
-		"description": "This was my final project in my Intro to Programming course.  It's an culmination of notes from stage 4, which touched on the full " +
-		"stack web developer, and stage 5 which was an all around course on	new ideas.",
+		"description": "This screen shot shows my stage 5 final project in Udacity's Intro To Programming course.  I used HTML, CSS, and some JavaScript.  To set it up on Google App Engine I used Python to create different class handlers for each page and setup my Jinja2 template structure. ",
 		"images": [
-			"../src-images/inpd-stage5-home-400small.png", "../src-images/inpd-stage5-toggle-descriptions-400small.png", "../src-images/inpd-stage5-codepen-400small.png", "../src-images/inpd-stage5-guestbook-400small.png",
-			"../src-images/inpd-stage5-notes-400small.png", "../src-images/inpd-stage5-notes2-400small.png"
+			"../src-images/stage5-home.png", "../src-images/stage5-toggle-descriptions.png", "../src-images/stage5-codepen.png", "../src-images/stage5-guestbook.png",
+			"../src-images/stage5-notes.png", "../src-images/stage5-notes2.png"
 		]
 	},
 	{
 		"title": "Portfolio",
 		"dates": "July 2015",
-		"description": "My first project in the Front End Web Developer Nano-Degree was to create a basic portfolio page that could show off my projects and the that I wrote.",
+		"description": "This screen shot shows my first project in Udacity's Front End Web Developer course.  This site was made with HTML, CSS, and Bootstrap.  It too is setup on Google App Engine using Python.",
 		"images": [
-			"../src-images/portfolio-1-400small.png", "../src-images/portfolio-2-400small.png", "../src-images/portfolio-3-400small.png"
+			"../src-images/portfolio1.png", "../src-images/portfolio2.png", "../src-images/portfolio3.png"
 		]
 	}
 	]
@@ -140,30 +136,65 @@ work.display = function() {
 
 work.display();
 
-//this projects display function assigns my project object to the resume
+/*this projects display function assigns my project object to the resume*/
 projects.display = function() {
-	for (project in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
+	//This section of code assigns my images, title, dates, and description to the corresponding modal div for my first project in projects.html//
+	$(".projects").append(HTMLprojectStart1);
 
-		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(formattedProjectTitle);
+	var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[0].title);
+	$(".project-entry").append(formattedProjectTitle);
 
-		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(formattedProjectDates);
+	var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[0].dates);
+	$(".project-entry").append(formattedProjectDates);
 
-		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append(formattedProjectDescription);
+	var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[0].description);
+	$(".project-entry").append(formattedProjectDescription);
 
-		if(projects.projects[project].images.length > 0) {
-			for(image in projects.projects[project].images) {
-				var formattedProjectImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$(".project-entry:last").append(formattedProjectImages);
-			}
-		}
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images[0]);
+	$(".img-insert1").append(formattedProjectImage);
 
-	}
-}
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images[1]);
+	$(".img-insert2").append(formattedProjectImage);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images[2]);
+	$(".img-insert3").append(formattedProjectImage);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images[3]);
+	$(".img-insert4").append(formattedProjectImage);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images[4]);
+	$(".img-insert5").append(formattedProjectImage);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images[5]);
+	$(".img-insert6").append(formattedProjectImage);
+
+
+	//This section of code assigns my images, title, dates, and description to the corresponding modal div for my second project in projects.html//
+	$(".projects2").append(HTMLprojectStart2);
+
+	var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[1].title);
+	$(".project-entry2").append(formattedProjectTitle);
+
+	var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[1].dates);
+	$(".project-entry2").append(formattedProjectDates);
+
+	var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[1].description);
+	$(".project-entry2").append(formattedProjectDescription);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[1].images[0]);
+	$(".img-insert7").append(formattedProjectImage);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[1].images[1]);
+	$(".img-insert8").append(formattedProjectImage);
+
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[1].images[2]);
+	$(".img-insert9").append(formattedProjectImage);
+		
+};
+
 projects.display();
+
+
 
 //below is my code for displaying my education
 education.display = function () {
@@ -203,7 +234,7 @@ $("#map-div").append(googleMap);
 //}
 
 //$("#main").prepend(internationalizeButton);
-
+// The code below is for the smaller width navbar that shows/ hides the menu options//
 $(function() {
     var pull        = $('#pull');
         menu        = $('nav ul');
