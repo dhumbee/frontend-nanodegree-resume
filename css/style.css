@@ -410,8 +410,16 @@ blockquote {
 
 /*Project page styling*/
 
-.picture-grid {
-  
+.grayscale {
+    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%); 
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
 }
 
 .pixel-size {
