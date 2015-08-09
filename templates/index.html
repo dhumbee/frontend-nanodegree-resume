@@ -28,7 +28,7 @@
         <li><a href="/"><strong>Home</strong></a></li>
         <li><a href="work-experience.html">Where I've Been</a></li>
         <li><a href="projects.html">What I Do</a></li>
-        <li><a href="education.html">How I Grow</a></li>
+        <li><a href="education.html">Education</a></li>
       </ul>
       <a href="#" id="pull">Menu</a>
     </nav>
@@ -71,34 +71,7 @@
         </div>
     </section>
     {% endblock %}
-    
-    <!--
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>cd 
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="map-div">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div> -->
-
-
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
+     
   <script src="../js/resumeBuilder.js"></script>
 
   <script type="text/javascript">
@@ -112,7 +85,10 @@
       document.getElementById('workExperience').style.display = 'none';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementsByClassName('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry2').length === 0) {
+      document.getElementsByClassName('projects2').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.display = 'none';
