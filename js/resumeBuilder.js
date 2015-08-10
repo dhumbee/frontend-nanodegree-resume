@@ -96,23 +96,25 @@ var projects = {
 	}
 	]
 };
+//This is my bio display function
+bio.display = function () {
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedNameRole = formattedName + formattedRole;
+	$("#header").prepend(formattedNameRole);
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedNameRole = formattedName + formattedRole;
-$("#header").prepend(formattedNameRole);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
+	$("#pic").append(formattedBioPic);
 
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
-$("#pic").append(formattedBioPic);
+	$("#skills-section").append(HTMLskillsStart);
 
-$("#skills-section").append(HTMLskillsStart);
-
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
-$("#contact-me").append(formattedContactInfo);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	var formattedContactInfo = formattedMobile + formattedEmail + formattedGithub +formattedLocation;
+	$("#contact-me").append(formattedContactInfo);
+}
 
 //below is the code that will add my work information to the resume
 work.display = function() {
@@ -221,19 +223,6 @@ education.display();
 //here is the selector that puts the google map on the page
 $("#map-div").append(googleMap);
 
-//below is the code for the internalize button, it's not running correctly yet
-//var name=formattedName;
-
-//function inName() {
-	//name = name.trim().split(" ");
-	//console.log(name);
-	//name[1]=name[1].toUpperCase();
-	//name[0]=name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-
-	//return name[0] +" "+name[1];	
-//}
-
-//$("#main").prepend(internationalizeButton);
 // The code below is for the smaller width navbar that shows/ hides the menu options//
 $(function() {
     var pull        = $('#pull');
